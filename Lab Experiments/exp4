@@ -7,7 +7,7 @@ values from the numerical columns. ''
 import pandas as pd
 
 # Importing the dataset (example.csv is a placeholder; replace it with your actual file)
-data = pd.read_csv("sample_data.csv")
+data = pd.read_csv("eda_sample_dataset.csv")
 
 # Display the number of rows and columns
 print(f"Number of rows: {data.shape[0]}")
