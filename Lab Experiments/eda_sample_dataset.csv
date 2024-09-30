@@ -1,0 +1,11 @@
+age,income,gender,department,sales,target
+25,50000,male,HR,200,1
+30,60000,female,Finance,240,0
+22,55000,female,HR,210,1
+35,65000,male,IT,250,1
+40,70000,male,IT,280,0
+29,62000,female,HR,230,0
+23,48000,male,Finance,190,1
+28,52000,female,Finance,220,0
+31,68000,male,IT,270,0
+36,66000,female,HR,260,1
