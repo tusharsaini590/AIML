@@ -1,0 +1,46 @@
+''Write a python program to import and export data using Pandas and 
+show the details of the dataset like number of rows, columns, first five 
+rows, size, number of missing values, sum, average, min and max 
+values from the numerical columns. ''
+
+
+import pandas as pd
+
+# Importing the dataset (example.csv is a placeholder; replace it with your actual file)
+data = pd.read_csv("sample_data.csv")
+
+# Display the number of rows and columns
+print(f"Number of rows: {data.shape[0]}")
+print(f"Number of columns: {data.shape[1]}")
+
+# Display the first five rows of the dataset
+print("First five rows:")
+print(data.head())
+
+# Display the size of the dataset (number of elements)
+print(f"Size of dataset (number of elements): {data.size}")
+
+# Checking for missing values in the dataset
+print("Number of missing values in each column:")
+print(data.isnull().sum())
+
+# Display summary statistics of the dataset (for numerical columns)
+print("Summary statistics for numerical columns:")
+print(data.describe())
+
+# Calculating the sum, average, minimum, and maximum values of the numerical columns
+numerical_cols = data.select_dtypes(include=['float64', 'int64']).columns
+print("\nSum of numerical columns:")
+print(data[numerical_cols].sum())
+
+print("\nAverage of numerical columns:")
+print(data[numerical_cols].mean())
+
+print("\nMinimum values of numerical columns:")
+print(data[numerical_cols].min())
+
+print("\nMaximum values of numerical columns:")
+print(data[numerical_cols].max())
+
+# Exporting the dataset to a new CSV file (optional)
+data.to_csv('exported_data.csv', index=False)
